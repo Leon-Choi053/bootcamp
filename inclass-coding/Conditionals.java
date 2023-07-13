@@ -1,5 +1,3 @@
-import java.lang.runtime.SwitchBootstraps;
-
 public class Conditionals {
   public static void main(String[] args) {
     // if, else if, else
@@ -83,18 +81,20 @@ public class Conditionals {
     // Simple Version
     int dayOfWeek = 3;
     String dayName = "";
-    switch (dayOfWeek) { //check if the value equals to the following cases
+    switch (dayOfWeek) { // check if the value equals to the following cases
       case 1:
         dayName = "Monday";
-        break; //exit
+        System.out.println(1);
+        break; // exit
       case 2:
         dayName = "Tuesday";
         break;
       case 3:
         dayName = "Wednesday";
+        System.out.println(1);
         break;
       case 4:
-        dayName = "Thursday";
+        dayName = "Thursday"; 
         break;
       case 5:
         dayName = "Friday";
@@ -107,6 +107,26 @@ public class Conditionals {
         break;
     }
     System.out.println("day name is " + dayName);
+
+    char grade2 = 'B';
+    int pockeyMoney = 100;
+    switch (grade2){
+      case 'A':
+      pockeyMoney += 100;
+      break;
+      case 'B':
+      pockeyMoney += 70;
+      break;
+      case 'C':
+      pockeyMoney += 50;
+      break;
+      case 'D':
+      pockeyMoney += 20;
+      break;
+      default:
+      pockeyMoney += 5;
+    }
+    System.out.println(pockeyMoney);
 
   }
 }
