@@ -64,8 +64,72 @@ public class Loops {
     // i = 1, hello
     // i = 2, hello
     // i = 3, hello
-    // break;
+    // break
 
+    // continue
+    for (int i = 0; i < 6; i++) {
+      System.out.println("Halo!");
+      if (i > 3) {
+        continue;
+      }
+      System.out.println("bye!!");
+    }
+    // i = 0, hello, bye
+    // i = 1, hello, bye
+    // i = 2, hello, bye
+    // i = 3, hello, bye
+    // i = 4, hello
+    // i = 5, hello
+    // i = 6, exit
 
+    for (int i = 0; i > 8; i++) {
+      if (i % 2 == 0) {
+        System.out.println("i=" + i);
+      }
+      if (i % 3 == 0) {
+        System.out.println("i=" + i);
+      }
+    }
+    // if(i % 3 == 0) {
+    // System.out.println("i=" + i);
+    // System.out.println("hello")
+    // }
+
+    // Nested Loop
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 3; j++) {
+        System.out.println("hello" + i + j);
+      }
+      // i=0, j=0, hello
+      // i=0, j=1, hello
+      // i=0, j=2, hello
+      // i=0, j=3, exit
+      // i=1, j=0, hello
+      // i=1, j=1, hello
+      // i=1, j=2, hello
+      // i=1, j=3, exit
+      // i=2, j=0, hello
+      // i=2, j=1, hello
+      // i=2, j=2, hello
+      // i=2, j=3, exit
+      // i=3, j=0, hello
+      // i=3, j=1, hello
+      // i=3, j=2, hello
+      // i=3, j=3, exit
+      // i=4, j=0, hello
+      // i=4, j=1, hello
+      // i=4, j=2, hello
+      // i=4, j=3, exit
+    }
+
+    for (int i = 0; i < 5; i++) {
+      System.out.print("*");
+      for (int j = 0; j < i; j++) {
+        System.out.print("*");
+      }
+      System.out.println("");
+    }
+    // i=0 -> 符合條件 -> print * -> i=1
+    //
   }
 }
