@@ -4,7 +4,7 @@ public class ReadInput {
   public static void main(String[] args) {
     String str = "Hello";
     str.charAt(0); // H
-
+    System.out.println(str.charAt(0));
     // Scanner --> read user input
     System.out.println("please input an integer: ");
     Scanner s = new Scanner(System.in);
