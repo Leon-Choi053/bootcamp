@@ -135,13 +135,37 @@ public class Loops {
       }
       System.out.println("");
     }
+
+    //Solution of vincent
+    for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < i; j++) {
+          System.out.print("*");
+      }
+        System.out.println("");
+    }
+
     //NOT able to use print, println only
     String ans = "*";
     for (int i = 0; i < 5; i++) {
       for (int j = 0; j < i; j++) {
          ans += "*";
       }
-      System.out.println(ans);
+        System.out.println(ans);
     }
+    //solution of Vincent
+    String str = "";
+    for (int i = 0; i < 5; i++) {
+        str += "*";
+        System.out.println(str);
+      }
+
+    str = "";
+      for (int i = 0; i < 5; i++) {
+        str = "";
+        for (int j = 0; j < i; j++) {
+          str += "*";
+        }
+        System.out.println(str);
+      }
   }
 }
