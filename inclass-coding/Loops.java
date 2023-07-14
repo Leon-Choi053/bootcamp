@@ -68,18 +68,18 @@ public class Loops {
 
     // continue
     for (int i = 0; i < 6; i++) {
-      System.out.println("Halo!");
+      System.out.println("Halo");
       if (i > 3) {
         continue;
       }
-      System.out.println("bye!!");
+      System.out.println("bye");
     }
-    // i = 0, hello, bye
-    // i = 1, hello, bye
-    // i = 2, hello, bye
-    // i = 3, hello, bye
-    // i = 4, hello
-    // i = 5, hello
+    // i = 0, halo, bye
+    // i = 1, halo, bye
+    // i = 2, halo, bye
+    // i = 3, halo, bye
+    // i = 4, halo
+    // i = 5, halo
     // i = 6, exit
 
     for (int i = 0; i > 8; i++) {
@@ -122,6 +122,12 @@ public class Loops {
       // i=4, j=3, exit
     }
 
+    //able to use print to create 
+    //*
+    //**
+    //***
+    //****
+    //*****
     for (int i = 0; i < 5; i++) {
       System.out.print("*");
       for (int j = 0; j < i; j++) {
@@ -129,7 +135,13 @@ public class Loops {
       }
       System.out.println("");
     }
-    // i=0 -> 符合條件 -> print * -> i=1
-    //
+    //NOT able to use print, println only
+    String ans = "*";
+    for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < i; j++) {
+         ans += "*";
+      }
+      System.out.println(ans);
+    }
   }
 }
