@@ -38,8 +38,9 @@ public class loop2 {
 
     // Quiz will have this!!!
     System.out.println(str.charAt(2));
-    for (int i = 1; i < str.length(); ++i) {
-      if (str.charAt(i) == 'e');
+    for (int i = 1; i < str.length(); i++) {
+      if (str.charAt(i) == 'e')
+        ;
       System.out.println("index" + i);
       break;
     }
@@ -48,37 +49,37 @@ public class loop2 {
     // Found or Not Found
     boolean found = false;
     for (int i = 1; i < str.length(); ++i) {
-      if (str.charAt(i) == 'y'){
+      if (str.charAt(i) == 'y') {
         found = true;
         break;
       }
     }
-      if (found == true) {
-        System.out.println("found");
-      } else {
-        System.out.println("not found");
-      }
+    if (found == true) {
+      System.out.println("found");
+    } else {
+      System.out.println("not found");
+    }
 
-      //if the number of occurrence of target >= 3, print yes
-      char target = 'o';
-      int count = 0; 
-      boolean found2 =false;
-      for (int i = 0; i < str.length(); ++i) {
-        if (str.charAt(i) == target){
-          count++; 
-        }
-        //nice to have
-        if (count >=3){f
-          found2 = true;
-          break;
-        }
+    // if the number of occurrence of target >= 3, print yes
+    char target = 'o';
+    int count = 0;
+    boolean found2 = false;
+    for (int i = 0; i < str.length(); ++i) {
+      if (str.charAt(i) == target) {
+        count++;
       }
-        if (found2) {
-        System.out.println("yes");
-      } else {
-        System.out.println("no");
+      // nice to have
+      if (count >= 3) {
+        found2 = true;
+        break;
       }
-      System.out.println(count);
+    }
+    if (found2) {
+      System.out.println("yes");
+    } else {
+      System.out.println("no");
+    }
+    System.out.println(count);
   }
 
 }
