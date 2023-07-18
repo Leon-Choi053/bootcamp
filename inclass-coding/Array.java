@@ -84,6 +84,7 @@ public class Array {
     LOL[0] = "AD";
     LOL[1] = "Tank";
     LOL[2] = "Support";
+    LOL[4] = "AP";
     System.out.println(Arrays.toString(LOL));
 
     byte[] bytes=new byte[6];
