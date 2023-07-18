@@ -35,12 +35,9 @@ public class JavaQuest10 {
     if (indexPosition == my_array.length) {
       System.out.println("New Array: " + Arrays.toString(my_array));
     } else {
-      // shifting elements to the right
       for (int i = my_array.length - 1; i > indexPosition; i--) {
         my_array[i] = my_array[i - 1];
       }
-
-      // inserting the new element at the desired position
       my_array[indexPosition] = newValue;
       System.out.println("New Array: " + Arrays.toString(my_array));
     }
