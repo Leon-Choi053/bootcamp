@@ -2,7 +2,7 @@ public class Invoice {
 
   // A method to calculate total prices for an item
   public static double calcTotalItemPrice(int quantity, double unitPrice) {
-    return quantity * unitPrice;
+    return quantity * unitPrice; //main logic
   }
 
   // A method to calculate total amount of the invoice

@@ -18,16 +18,16 @@ public class methods {
     int j = sum(80, 30);
 
     // if (sum(1000, -30) == 970) {
-      if (i == 970) {
-    System.out.println(m + " " + z + " " + i + " " + j);
-    System.out.println(m);
+    if (i == 970) {
+      System.out.println(m + " " + z + " " + i + " " + j);
+      System.out.println(m);
     }
 
-    //call method2
+    // call method2
     method2("hello ");
     method2("Github ");
 
-    double circleArea = 5*5*pi();
+    double circleArea = 5 * 5 * pi();
     System.out.println("circle area=" + circleArea);
   }
 
@@ -47,10 +47,15 @@ public class methods {
   }
 
   public static void method2(String str) {
-    System.out.print("string= " + str);
+    if (str == null || str.equals("")) { //null is not empty, empty -> ""
+      return;
+    }
+    System.out.print("string= " + str); //main logic
   }
 
   public static double pi() {
     return 3.14159256;
   }
+
+
 }
