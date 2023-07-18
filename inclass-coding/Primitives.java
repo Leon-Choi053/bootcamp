@@ -26,15 +26,15 @@ public class Primitives {
     System.out.println("b2 =" + b2); // -128
 
     // for (byte k = 127; k < 129; k++) {
-    //   System.out.println("hello");
+    // System.out.println("hello");
     // }
 
-    //long[] arr = new long[(int) Long.MAX_VALUE];
+    // long[] arr = new long[(int) Long.MAX_VALUE];
     // int[] arr = new int[Integer.MAX_VALUE];
     // for (int n = 0; n < arr.length; n++) {
     // }
 
-    char c2 ='B'; //66
+    char c2 = 'B'; // 66
     if (c2 == 'B') {
       System.out.println("c2 is B");
     }
@@ -42,19 +42,29 @@ public class Primitives {
       System.out.println("c2 is 66");
     }
 
-    char c3 =67;
-    if(c3 == 'C'){
+    char c3 = 67;
+    if (c3 == 'C') {
       System.out.println("c3 is C");
     }
 
-    //ASCII (int) tyo char
+    // ASCII (int) tyo char
     int v = 'a';
-    char o = (char) g; //downcasting
-    char o2 = 66; //why? downcast
+    char o = (char) v; // downcasting
+    char o2 = 66; // why? downcast
 
     //
     int h = (int) 1000L; // downcast, explicit conversion
-    byte r = (byte) 9;
+    short s10 = (byte) 128;
+    byte g = (byte) s10;
+    // byte g2 = 128; //error
+
+    char character = 'a' + 1;
+    if (character == 'b') {
+      System.out.println("character=" + character);
+    }
+    if (character > 'a') {
+      System.out.println("character > a");
+    }
 
   }
 }
