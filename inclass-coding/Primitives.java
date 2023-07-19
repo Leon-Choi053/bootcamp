@@ -42,7 +42,8 @@ public class Primitives {
       System.out.println("c2 is 66");
     }
 
-    char c3 = 67;
+    char c3 = 2399;
+    System.out.println("c3 =" + c3);
     if (c3 == 'C') {
       System.out.println("c3 is C");
     }
@@ -65,6 +66,7 @@ public class Primitives {
     if (character > 'a') {
       System.out.println("character > a");
     }
+    //String 
 
   }
 }

@@ -5,8 +5,8 @@ public class Swap {
     int temp = arr[0];
     // arr[0] = arr[3];
     // arr[3] = temp;
-    arr[0] = arr[arr.length - 1]; //same as above
-    arr[arr.length - 1] = temp; //same as above
+    arr[0] = arr[arr.length - 1]; // same as above
+    arr[arr.length - 1] = temp; // same as above
     for (int i = 0; i < arr.length; i++) {
       System.out.println(arr[i] + " ");
     }
@@ -34,15 +34,36 @@ public class Swap {
     String str6 = "c";
     String output6 = SwapOddEvenCharacter(str6);
     System.out.println(output6);
+    // "" -> ""
+    // "ab cd" -> "bac d"
+    
   }
-
+  public static String SwapOddEvenCharacter(int str) {
+    return "1";
+  }
+  //Swap
   public static String SwapOddEvenCharacter(String str) {
     char[] chars = str.toCharArray();
-    for (int i = 0; i < chars.length - 1; i += 2) {
-        char temp = chars[i];
+    char temp;
+    for (int i = 0; i < chars.length; ++i) {
+      if (i == chars.length - 1) {
+        break;
+      }
+      if (i % 2 == 0) {
+        temp = chars[i];
         chars[i] = chars[i + 1];
         chars[i + 1] = temp;
+      }
+      // for (int i = 0; i < chars.length - 1; i += 2) {
+      // char temp = chars[i];
+      // chars[i] = chars[i + 1];
+      // chars[i + 1] = temp;
     }
-    return new String(chars);
-    }
+    //return new String(chars);
+    String str1 = String.valueOf(123);
+    String str2 =String.valueOf(true);
+    return String.valueOf(chars);
+  }
+
+
 }
