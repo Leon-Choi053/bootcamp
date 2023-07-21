@@ -36,7 +36,7 @@ public class String2 {
     // contains()
     String s = "lo";
     System.out.println(str.contains(s)); // true (hello contains lo)
-    System.out.println(str.contains("ol")); // false (hello contains ol)
+    System.out.println(str.contains("ol")); // false (hello dont's contains ol)
     if (str.contains("lo")) {
       System.out.println("str contains lo");
     }

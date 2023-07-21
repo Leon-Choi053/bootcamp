@@ -10,22 +10,23 @@ public class JavaQuest13 {
   public static void main(String[] args) {
     double celsius = 23.56d;
     double[] arr =
-        new double[] {convertKelvin(celsius), convertFahrenheit(celsius)};
+        new double[] {Kelvin(celsius), Fahrenheit(celsius)};
 
     for (int i = 0; i < arr.length; i++) {
       if (i == 0) {
-        System.out.println("Temperature in Kelvin: " + arr[i]);
+        System.out.println("Temperature in Kelvin is " + arr[i]);
       } else if (i == 1) {
-        System.out.println("Temperature in Fahrenheit: " + arr[i]);
+        System.out.println("Temperature in Fahrenheit is " + arr[i]);
       }
     }
   }
-
-  // Kelvin (蘭氏) = Celsius (攝氏) + 273.15
-  // Code a method here to return temperature in Fahrenheit, by inputting temperature in Celsius
-
-  // Fahrenheit (華氏) = Celsius (攝氏) * 1.80 + 32.00
-  // Code a method here to return temperature in Fahrenheit, by inputting temperature in Celsius
+  public static double Kelvin(double celsius) {
+      return celsius + 273.15;
+  }
+  
+  public static double Fahrenheit(double celsius) {
+      return celsius * 1.8 + 32;
+  }
 
 
 }
