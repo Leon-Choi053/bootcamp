@@ -17,16 +17,22 @@ public class JavaQuest15 {
     // Example 1
     String s1 = "foobar";
     char letter1 = 'o';
-    System.out.println("Example 1 : " + percentageLetter(s1, letter1));
+    System.out.println("Example 1 : " + percentageLetter(s1, letter1) + "%");
 
     // Example 2
     String s2 = "jjjj";
     char letter2 = 'k';
-    System.out.println("Example 2 : " + percentageLetter(s2, letter2));
+    System.out.println("Example 2 : " + percentageLetter(s2, letter2)+"%");
   }
 
   public static int percentageLetter(String s, char letter) {
-    // code here
-
+      int count = 0;
+      for (int i = 0; i < s.length(); i++) {
+          if (s.charAt(i) == letter) {
+              count++;
+          }
+      }
+      int percentage = (int) Math.floor((count * 100.0) / s.length());
+      return percentage;
   }
 }

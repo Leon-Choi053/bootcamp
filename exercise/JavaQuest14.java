@@ -20,12 +20,31 @@ public class JavaQuest14 {
   // Do not change anything in main method
   public static void main(String[] args) {
     boolean res = palindrome(13431); // true
+    System.out.println(res);
     boolean res2 = palindrome(-121); // false
+    System.out.println(res2);
     boolean res3 = palindrome(1); // true
+    System.out.println(res3);
     boolean res4 = palindrome(22); // true
+    System.out.println(res4);
     boolean res5 = palindrome(1231); // false
+    System.out.println(res5);
   }
 
-  // Code a method here to return true if the integer is palindrome, otherwise false
+  public static boolean palindrome(int x) {
+    if (x < 0) {
+        return false;
+    }
+    String s = String.valueOf(x);
+    int left = 0, right = s.length() - 1;
+    while (left < right) {
+        if (s.charAt(left) != s.charAt(right)) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
 
 }
