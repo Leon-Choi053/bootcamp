@@ -30,5 +30,11 @@ public class Demo {
     Computer computer = new Computer();
     String str = new String("Hello"); // str -> object reference
     System.out.println(str); // Hello
-  }
+
+    person.setAge(15);
+    person.getAge(); // 15
+
+    Student student = new Student("Eric", "Lau", 30);
+    
+  } 
 }

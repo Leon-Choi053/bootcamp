@@ -1,7 +1,7 @@
 public class Person { // template
   // Describe the person by attributes
-  int age;
-  char gender;
+  private int age;
+  private char gender; // week 6 -> ENUM
   // ...
 
   public static boolean isMale(char gender) { // belongs to class
@@ -47,7 +47,7 @@ public class Person { // template
 
     Person p = new Person(); // Produce empty person object, with default value
     Person p2 = new Person(); // Produce empty person object, with default value
-
+    p.setAge(13);
     // Static vs non-static
     //static
     System.out.println(isMale('F')); // -> false

@@ -16,7 +16,7 @@ public class wapper2 {
     byte b3 = b2;
 
     long l4 = 100; // int -> long(upcast)
-    Long l = 10; // long -> Long (auto-boxing)
+    Long l = (long) 400; // long -> Long (auto-boxing)
     long l2 = l;
     Long l3 = l2;
 
