@@ -20,8 +20,9 @@ public class StringBox {
     return this; // StringBox object
   }
 
-  public static StringBox append(String str, String str2){ // obj.append()
-    if(str ==null || "".equals(str));
+  public static StringBox append(String str, String str2) { // obj.append()
+    if (str == null || "".equals(str))
+      ;
     return null;
 
   }
@@ -43,11 +44,13 @@ public class StringBox {
 
   }
 
-  public StringBox insert(int idx, String s){
-    if(idx <0&&idx>this.string.length()){
+  public StringBox insert(int idx, String s) {
+    if (idx < 0 && idx > this.string.length()) {
       return this;
     }
-    this.string = this.string.substring(0, idx) + s + this.string.substring(idx);
+    this.string =
+        this.string.substring(0, idx) + s + this.string.substring(idx);
     return this;
   }
+
 }

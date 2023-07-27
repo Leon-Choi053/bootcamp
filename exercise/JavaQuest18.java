@@ -1,16 +1,14 @@
 /*
  * 
- * Question : Given an array of strings words, 
- * return the first palindromic(對稱) string in the array.
- *  If there is no such string, return an empty string "".
- * A string is palindromic if it reads the same forward and backward.
- *  words[i] consists only of lowercase English letters.*/
+ * Question : Given an array of strings words, return the first palindromic(對稱) string in the array. If there is no such string, return an empty string "". A string is palindromic if it reads the same
+ * forward and backward. words[i] consists only of lowercase English letters.
+ */
 public class JavaQuest18 {
   public static void main(String[] args) {
-    String[] testCase1 = new String[] { "abc", "car", "ada", "racecar", "cool" };
-    String[] testCase2 = new String[] { "notapalindrome", "racecar" };
-    String[] testCase3 = new String[] { "ADABCCBADA", "car", "ada", "racecar" };
-    String[] testCase4 = new String[] { "abc" };
+    String[] testCase1 = new String[] {"abc", "car", "ada", "racecar", "cool"};
+    String[] testCase2 = new String[] {"notapalindrome", "racecar"};
+    String[] testCase3 = new String[] {"ADABCCBADA", "car", "ada", "racecar"};
+    String[] testCase4 = new String[] {"abc"};
 
     System.out.println(firstPalindrome(testCase1)); // Output : "ada"
     System.out.println(firstPalindrome(testCase2)); // Output : "racecar"
@@ -20,13 +18,24 @@ public class JavaQuest18 {
   }
 
   private static boolean isPalindrome(String s) {
-    // hints : if a String is Palindrome , return true 
-    // 
+    // Check if a String is Palindrome
+    int i = 0, j = s.length() - 1;
+    while (i < j) {
+      if (s.charAt(i) != s.charAt(j)) {
+        return false;
+      }
+      i++;
+      j--;
+    }
+    return true;
   }
 
   public static String firstPalindrome(String[] words) {
-// hints : finish the logic by using isPalindrome() , for-loop , if-else 
-
+    for (String word : words) {
+      if (isPalindrome(word)) {
+        return word;
+      }
+    }
     return "No Palindrome word in String Array.";
   }
 

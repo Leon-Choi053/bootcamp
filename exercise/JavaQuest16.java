@@ -17,7 +17,19 @@
 
 public class JavaQuest16 {
   // Given an integer n (n > 0), Find n unique Integers Sum up to Zero
-
+  public static int[] sumToZero(int n) {
+    int[] result = new int[n];
+    int i = 0;
+    while (i < n - 1) {
+        result[i] = i + 1;
+        result[i + 1] = -(i + 1);
+        i += 2;
+    }
+    if (n % 2 != 0) {
+        result[n - 1] = 0;
+    }
+    return result;
+}
   // Do not change anything in main method
   public static void main(String[] args) {
     int[] nums = sumToZero(5); // n = 5

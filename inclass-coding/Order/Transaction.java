@@ -13,6 +13,10 @@ public class Transaction {
     this.unitPrice = unitPrice;
   }
 
+  public double subtotal(){
+    return this.subtotal();
+  }
+
   public int getItemNo(){
     return this.itemNo;
   }
