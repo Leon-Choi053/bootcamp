@@ -26,11 +26,9 @@ public class JavaQuest20 {
     }
     int i = 0;
     while (i < n) {
-      // Check if s and goal are equal after rotating s
       if (s.equals(goal)) {
         return true;
       }
-      // Rotate s by moving the leftmost character to the rightmost position
       s = s.substring(1) + s.charAt(0);
       i++;
     }
