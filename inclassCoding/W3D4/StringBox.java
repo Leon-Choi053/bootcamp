@@ -1,5 +1,8 @@
 package inclassCoding.W3D4;
 
+import java.util.Arrays;
+import inclassCoding.W2D2.Array;
+
 public class StringBox {
 
   private String string;
@@ -40,6 +43,8 @@ public class StringBox {
     s2.insert(3, "java");
 
     String s3 = StringBox.append("hello", " world").toString();
+    char[] result = s3.toCharArray();
+    System.out.println(Arrays.toString(result));
 
     String a = null;
     a.charAt(2);

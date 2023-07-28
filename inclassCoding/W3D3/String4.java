@@ -1,3 +1,5 @@
+package inclassCoding.W3D3;
+
 public class String4 {
 
   //String Literal Pool (Heap) = String 

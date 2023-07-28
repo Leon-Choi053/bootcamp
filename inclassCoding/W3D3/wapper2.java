@@ -1,3 +1,5 @@
+package inclassCoding.W3D3;
+
 public class wapper2 {
   public static void main(String[] args) {
     // auto-boxing
