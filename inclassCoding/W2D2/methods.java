@@ -1,3 +1,5 @@
+package inclassCoding.W2D2;
+
 public class methods {
 
   public static void main(String[] args) { // method name: main()

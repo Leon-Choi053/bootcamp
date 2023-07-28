@@ -1,3 +1,5 @@
+package inclassCoding.W2D2;
+
 public class Invoice {
 
   // A method to calculate total prices for an item

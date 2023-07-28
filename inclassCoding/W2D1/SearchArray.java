@@ -1,3 +1,5 @@
+package inclassCoding.W2D1;
+
 import java.util.Arrays;
 
 public class SearchArray {

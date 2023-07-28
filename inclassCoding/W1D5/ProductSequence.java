@@ -1,3 +1,5 @@
+package inclassCoding.W1D5;
+
 public class ProductSequence {
   public static void main(String[] args) {
     //0,1,2,3,4,5 .....

@@ -1,3 +1,5 @@
+package inclassCoding.W3D4;
+
 public class StringBox {
 
   private String string;

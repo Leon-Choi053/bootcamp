@@ -1,3 +1,5 @@
+package inclassCoding.W1D4;
+
 public class Conditionals {
   public static void main(String[] args) {
     // if, else if, else

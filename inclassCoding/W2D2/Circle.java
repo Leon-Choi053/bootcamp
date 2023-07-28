@@ -1,3 +1,5 @@
+package inclassCoding.W2D2;
+
 public class Circle {
   public static double area(double radius) {
     return radius * radius * 3.14159;

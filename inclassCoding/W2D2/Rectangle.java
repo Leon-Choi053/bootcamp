@@ -1,3 +1,5 @@
+package inclassCoding.W2D2;
+
 public class Rectangle {
 
   public static double area(double length, double width) {

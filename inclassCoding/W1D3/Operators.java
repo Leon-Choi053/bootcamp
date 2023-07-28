@@ -1,3 +1,5 @@
+package inclassCoding.W1D3;
+
 public class Operators {
   public static void main(String[] args) {
     int x = 10 + 5;

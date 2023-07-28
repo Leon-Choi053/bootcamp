@@ -1,3 +1,5 @@
+package inclassCoding.W2D2;
+
 import java.util.Arrays;
 
 public class Array {

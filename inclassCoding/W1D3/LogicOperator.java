@@ -1,3 +1,5 @@
+package inclassCoding.W1D3;
+
 public class LogicOperator {
   public static void main(String[] args) {
     boolean isExpensive = true;

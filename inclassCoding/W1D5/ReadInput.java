@@ -1,3 +1,5 @@
+package inclassCoding.W1D5;
+
 import java.util.Scanner;
 
 public class ReadInput {

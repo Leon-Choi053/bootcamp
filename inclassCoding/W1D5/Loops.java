@@ -1,3 +1,5 @@
+package inclassCoding.W1D5;
+
 public class Loops {
   public static void main(String[] args) {
     // for loop
