@@ -19,6 +19,17 @@ public class JavaQuest24 {
 
   }
 
-  public static int absolute(int[] nums, int target) {
-  }
+  public static int absolute(int[] nums, int k) {
+    int count = 0;
+    int n = nums.length;
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            int diff = Math.abs(nums[i] - nums[j]);
+            if (diff == k) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
 }

@@ -14,6 +14,27 @@ public class JavaQuest23 {
   }
 
   public static boolean sameNumberOfVowels(String s) {
-    // code here
+    int n = s.length();
+    String a = s.substring(0, n / 2);
+    String b = s.substring(n / 2);
+
+    char[] vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+    int countA = countVowels(a, vowels);
+    int countB = countVowels(b, vowels);
+
+    return countA == countB;
+  }
+
+  private static int countVowels(String s, char[] vowels) {
+    int count = 0;
+    for (char c : s.toCharArray()) {
+      for (char vowel : vowels) {
+        if (c == vowel) {
+          count++;
+          break;
+        }
+      }
+    }
+    return count;
   }
 }
