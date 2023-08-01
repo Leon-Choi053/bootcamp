@@ -5,14 +5,15 @@ public class Laptop extends Machine{
   // Laptop is subclass 實際存在(child), Machine is superclass 概念存在(parent)
   // Inherit Machine attribute ("double weight")
   // Inherit Mashine methods (start() and stop())
-  
   Keyboard keyboard;
   Monitor monitor;
+  private int volume;
 
     // superclass must call superclass constructor
 
   public Laptop(){
     // implicitly call superclass empty constructor
+    // super(); // new Machine()
   }
 
   public Laptop(Keyboard keyborad, Monitor monitor) {
@@ -28,6 +29,7 @@ public class Laptop extends Machine{
 
   public Laptop(double weight, Keyboard keyboard, Monitor monitor) {
     super(weight); // new Machine(5);
+    // super(); + this.setWeight(weight);
     this.keyboard = keyboard;
     this.monitor = monitor;
   }
@@ -40,6 +42,10 @@ public class Laptop extends Machine{
   @Override // Method Overrrind
   public void stop() {
     System.out.println("Laptop stop ...");
+  }
+
+  public void mute() {
+    this.volume = 0;
   }
 
   public static void main(String[] args) {
@@ -55,5 +61,17 @@ public class Laptop extends Machine{
     System.out.println(machine.getWeight());
     machine.start(); // Machine Start ... 
     machine.stop(); // Machine Stop ...
+
+    Laptop laptop2 = new Laptop();
+    laptop2.setWeight(10.0d);
+    System.out.println(laptop2.getWeight());
+
+    Laptop laptop3 = new Laptop();
+    System.out.println(laptop3.getWeight());
+    System.out.println(Machine.staticMethod("ABC", "def"));
+    System.out.println(Laptop.staticMethod("abc", "def"));
+    // laptop3.staticMethod("abc","def"); // not recommended
+
+    
   }
 }
