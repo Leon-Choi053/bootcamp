@@ -1,5 +1,7 @@
 package inclassCoding.W4D1;
 
+import java.util.Objects;
+
 public class Laptop extends Machine{
 
   // Laptop is subclass 實際存在(child), Machine is superclass 概念存在(parent)
@@ -35,7 +37,18 @@ public class Laptop extends Machine{
   }
 
   @Override
+  public boolean equals(Object o){
+    if(this == o)
+      return true;
+    if(!(o instanceof Laptop))
+      return false;
+    Laptop laptop =(Laptop) o;
+    return Objects.equals(laptop.keyboard, this.keyboard) && Objects.equals(laptop.monitor, this.monitor); 
+  }
+
+  @Override // Method Overriding
   public void start() {
+    super.start(); // Machine Start ...
     System.out.println("Laptop start ...");
   }
 

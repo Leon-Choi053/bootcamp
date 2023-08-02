@@ -13,7 +13,8 @@ public class JavaQuest29 {
   }
 
   public static String separator(int n) {
-    // code here
+    String separateNum = String.format("$%,d", n);
+    return separateNum;
   }
 
 }

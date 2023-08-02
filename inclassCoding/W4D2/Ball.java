@@ -19,12 +19,17 @@ public class Ball {
     return ball.color.equals(this.color);
   }
 
+  @Override
+  public String toString(){
+    
+  }
+
   public static void main(String[] args) {
     Ball b1= new Ball("Blue");
     Ball b2=new Ball("Blue");
-
     System.out.println(b1 == b2);
     System.out.println(b1.equals(b2));
+
     System.out.println(b1);
     System.out.println(b1.toString());
   }
