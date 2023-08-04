@@ -18,16 +18,15 @@ public class Dog extends GameMember implements Move {
   @Override
   public void right() {
     System.out.println("Move right");
-    super.addScore(2);
-    // GameMember.up(this);
   }
 
   @Override
   public void up() {
     System.out.println("Moving up");
+    super.addScore(2);
+    // GameMember.up(this);
   }
 
   @Override
-  public void down() {
-  }
+  public void down() {}
 }
