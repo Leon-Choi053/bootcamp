@@ -3,7 +3,7 @@ package inclassCoding.W5D2;
 public class Book {
   String author;
   String name;
-  
+
   public Book(String author, String name) {
     this.author = author;
     this.name = name;
@@ -17,4 +17,8 @@ public class Book {
     return this.author;
   }
 
+  @Override
+  public String toString(){
+    return "[" + this.author+ ", " + this.name + "]";
+  }
 }

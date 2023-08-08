@@ -18,7 +18,9 @@ public class DemoHashMap2 {
     Author author2 = new Author("John", 29);
     bookMap.put(author1, new Book("Dummy", "Book3"));
     bookMap.put(author2, new Book("Dummy", "Book4"));
-    System.out.println(bookMap.size());
+    System.out.println(bookMap.size()); // 1
+
+    ArrayList<ArrayList<String>> strs = new ArrayList<>();
 
     HashMap<Author, ArrayList<Book>> bookMap2 = new HashMap<>();
     ArrayList<Book> booklList1 = new ArrayList<>();
@@ -29,8 +31,10 @@ public class DemoHashMap2 {
     booklList2.add(new Book("Dummy", "Book4"));
 
     bookMap2.put(author1, booklList1);
-
+    // Override, because author1.equals(author2) -> true
     bookMap2.put(author2, booklList2);
+
+    System.out.println(bookMap2.size());
 
     for (Map.Entry<Author, ArrayList<Book>> author : bookMap2.entrySet()) {
       // System.out.println(author.getKey().name);
@@ -38,5 +42,10 @@ public class DemoHashMap2 {
         System.out.println("Author name: " + author.getKey().name + "Book Name: " + book.getName());
       }
     }
+
+    for (Book book:bookMap2.get(new Author("John", 0))){
+      System.out.println(book);
+    }
+    
   }
 }
