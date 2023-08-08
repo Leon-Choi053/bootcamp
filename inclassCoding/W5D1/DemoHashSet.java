@@ -1,5 +1,6 @@
 package inclassCoding.W5D1;
 
+import java.awt.print.Book;
 import java.util.HashSet;
 
 public class DemoHashSet {
@@ -21,7 +22,7 @@ public class DemoHashSet {
       System.out.println("def is not added");
     }
 
-    // Example 2:
+    // Example 2: With Coordinate
     HashSet<Coordinate> coordinates = new HashSet<>();
     Coordinate c1 = new Coordinate(1, 1);
     Coordinate c2 = new Coordinate(1, 1);
@@ -33,5 +34,11 @@ public class DemoHashSet {
     Coordinate c3 = new Coordinate(2, 1);
     System.out.println(coordinates.add(c3)); // true
     System.out.println(coordinates.size()); // 2
+
+    // Example 3
+    HashSet<Book> books = new HashSet<>();
+    System.out.println(books.add(new Book("Eric"))); // true
+    System.out.println(books.add(new Book("Eric"))); // true, diff address
+    System.out.println(books.add(new Book("Steven"))); // true, diff address
   }
 }

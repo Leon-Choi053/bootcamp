@@ -6,7 +6,14 @@ public enum Color {
   GREEN("#00FF00"), //
   BLUE("#0000FF"), //
   ;
+  
+  private String hexCode;
 
+  private Color(String hexCode) { // private
+    this.hexCode = hexCode;
+  }
 
-
+  public String getHexCode() {
+    return this.hexCode;
+  }
 }
