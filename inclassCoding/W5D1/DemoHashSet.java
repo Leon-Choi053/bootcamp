@@ -37,8 +37,8 @@ public class DemoHashSet {
 
     // Example 3
     HashSet<Book> books = new HashSet<>();
-    System.out.println(books.add(new Book("Eric"))); // true
-    System.out.println(books.add(new Book("Eric"))); // true, diff address
-    System.out.println(books.add(new Book("Steven"))); // true, diff address
+    System.out.println(books.add(new Book("dummy", "Eric"))); // true
+    System.out.println(books.add(new Book("dummy", "Eric"))); // true, diff address
+    System.out.println(books.add(new Book("dummy", "Steven"))); // true, diff address
   }
 }

@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 public class DemoPriorityQueue {
   public static void main(String[] args) {
     PriorityQueue<String> queue = new PriorityQueue<>();
-    LinkedList<String> queue = new LinkedList<>();
+    LinkedList<String> queues = new LinkedList<>();
     // First In First Out
     queue.add("hello");
     queue.add("world");

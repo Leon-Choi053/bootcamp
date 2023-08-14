@@ -20,4 +20,7 @@ public class SortByColor implements Comparator<Ball> {
     Collections.sort(balls, new SortByColor());
     System.out.println(balls);
   }
+
+
+    
 }
