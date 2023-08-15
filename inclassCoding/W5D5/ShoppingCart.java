@@ -1,4 +1,4 @@
-package shopping;
+package inclassCoding.W5D5;
 
 import java.util.ArrayList;
 
