@@ -25,13 +25,19 @@ import java.util.Arrays;
 
 public class JavaQuest40 {
   public static void main(String[] args) {
-System.out.println(findNonMinOrMax(new int[]{1,2})); // -1
-System.out.println(findNonMinOrMax(new int[]{3,2,1,4})); // 2 or 3
-System.out.println(findNonMinOrMax(new int[]{2,1,3}));// 2
-System.out.println(findNonMinOrMax(new int[]{50,100,40,1}));// 40 or 50
+    System.out.println(findNonMinOrMax(new int[] {1, 2})); // -1
+    System.out.println(findNonMinOrMax(new int[] {3, 2, 1, 4})); // 2 or 3
+    System.out.println(findNonMinOrMax(new int[] {2, 1, 3}));// 2
+    System.out.println(findNonMinOrMax(new int[] {50, 100, 40, 1}));// 40 or 50
 
   }
-  public static int findNonMinOrMax(int[] nums) {
-    }
 
+  public static int findNonMinOrMax(int[] nums) {
+    Arrays.sort(nums);
+    if (nums.length >= 3) {
+      return nums[1];
+    } else {
+      return -1;
+    }
+  }
 }
