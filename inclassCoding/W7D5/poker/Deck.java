@@ -1,6 +1,6 @@
-package inclassCoding.W7D5.poker;
+import java.util.List;
 
 public class Deck {
-  List<Card> card;
-  List<Joker> joker;
+  // List<Card> cards;
+  // List<Joker> jokers;
 }

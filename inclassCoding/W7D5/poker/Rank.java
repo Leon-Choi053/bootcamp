@@ -1,37 +1,50 @@
-package inclassCoding.W7D5.poker;
-
 public enum Rank {
-  ONE(1),
-  TWO(2),
-  THREE(3),
-  FOUR(4),
-  FIVE(5),
-  SIX(6),
-  SEVEN(7),
-  EIGHT(8),
-  NINE(9),
-  TEN(10),
-  JACK(11),
-  QUEEN(12),
-  KING(13),
-  // JOKER(14),
+  ONE(1, 12), //
+  TWO(2, 13), //
+  THREE(3, 1), //
+  FOUR(4, 2), //
+  FIVE(5, 3), //
+  SIX(6, 4), //
+  SEVEN(7, 5), //
+  EIGHT(8, 6), //
+  NINE(9, 7), //
+  TEN(10, 8), //
+  JACK(11, 9), //
+  QUEEN(12, 10), //
+  KING(13, 11), //
+  // JOKER(14), //
   ;
 
-  int number;
+  int pokerRank;
+  int big2Rank;
 
-  private Rank(int number){
-    this.number = number;
+  private Rank(int pokerRank, int big2Rank) {
+    this.pokerRank = pokerRank;
+    this.big2Rank = big2Rank;
   }
 
-  public int getNumber() {
-    return this.number;
+  public int getPokerRank() {
+    return this.pokerRank;
   }
 
-  public int compare(Rank rank){ // -1,0,1
-    if(this.number > rank.getNumber()) {
+  public int getBig2Rank() {
+    return this.big2Rank;
+  }
+
+  public int compare(Game game, Rank rank) { // -1, 0, 1
+    int result = switch (game) {
+      case POKER -> compare(this.pokerRank, rank.getPokerRank());
+      case BIG2 -> compare(this.big2Rank, rank.getBig2Rank());
+      default -> 0;
+    };
+    return result;
+  }
+
+  private static int compare(int x, int y) {
+    if (x > y)
       return 1;
-    }else if(this.number < rank.getNumber()){
+    else if (x < y)
       return -1;
-    }return 0;
+    return 0;
   }
 }
