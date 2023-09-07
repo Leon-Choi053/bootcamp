@@ -29,7 +29,20 @@ public class JavaQuest43 {
   }
 
   public static int findCenter(int[][] edges) {
-    
+    int n = edges.length + 1;
+    int[] degree = new int[n + 1];
+    for (int[] edge : edges) {
+      int a = edge[0];
+      int b = edge[1];
+      degree[a]++;
+      degree[b]++;
+    }
+    int center = 1;
+    for (int i = 1; i <= n; i++) {
+      if (degree[i] > degree[center]) {
+        center = i;
+      }
+    }
+    return center;
   }
-
 }
