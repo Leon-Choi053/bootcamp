@@ -2,15 +2,18 @@ package com.hkjava.bootcamp;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.Duration;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 @TestInstance(TestInstance.Lifecycle.PER_METHOD) // default
+@DisplayName("Assert Method Tests")
 public class AssertTest {
 
   private int x; // instance variable
-
+  
   @Test
+  @DisplayName("AssertEquals Test")
   void testAssertEqual() {
     // Assertions.assertEquals(expected value, actual value);
     assertEquals(5, App.add(2, 3));
@@ -22,6 +25,7 @@ public class AssertTest {
   }
 
   @Test
+  @DisplayName("AssertNotEquals Test")
   void testAssertNotEqual() {
     assertNotEquals(4, App.add(1, 2));
     x++;
